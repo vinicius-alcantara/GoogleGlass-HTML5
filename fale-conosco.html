@@ -2,21 +2,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
-    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
-        <title>Google Glass</title>
-        <script language="javascript" src="_javascript/funcoes.js"></script>
-        <script>
-            function calc_total() {
-                var qtd = parseInt(document.getElementById('cQtd').value);
-                tot = qtd * 1500;
-                document.getElementById('cTot').value = tot;
-            }
-        </script>
-	</head>
-    
-    
-    
+    	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    	<link rel="stylesheet" type="text/css" href="_css/form.css"/>
+        	<title>Google Glass</title>
+        		<script language="javascript" src="_javascript/funcoes.js"></script>
+        			<script>
+            				function calc_total() {
+                				var qtd = parseInt(document.getElementById('cQtd').value);
+                				tot = qtd * 1500;
+                				document.getElementById('cTot').value = tot;
+            				}
+        			</script>
+</head>
 <body>
 <div id="interface">
 <header id="cabecalho">
@@ -24,9 +21,7 @@
         <h1>Google Glass</h1>
         <h2>A revolução do Google está chegando</h2>
     </hgroup>
-
     <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt=""/> 
-
 <nav id="menu">
 <h3>Menu Principal</h3>
 <ul>
@@ -37,85 +32,81 @@
     <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
 </ul>
 </nav>
-</header>
-
-    <section id="corpo-full">
-    <article id="artigo-principal">
-<header id="cabecalho-artigo">
-    <hgroup>   
-	    <h3>Fale Conosco > Contato</h3>
-	    <h1>Formulário de Contato</h1>
-        <h2>por Vinícius Alcântara</h2>
-        <h3 id="direita">Atualizado em 01/Maio/2017</h3>
-    </hgroup>
-</header>   
-    </article>
-        <form method="post" id="fContato" action="mailto:vinicius.redes2011@gmail.com" oninput="calc_total();">
-<fieldset id="int">
-<fieldset id="usuario">
-    <legend>Identificação do Usuário</legend>
-    <p><label for="cNome">Nome: </label><input name="tNome" id="cNome" type="text" size="25" maxlength="60" placeholder="Seu Nome"/></p>
-    <p><label for="cSenha">Senha: </label><input name="tSenha" id="cSenha" type="password" size="25" placeholder="Sua Senha"/></p>
-    <p><label for="cEmail">E-mail: </label><input name="tEmail" id="cEmail" type="email" size="25" maxlength="50" placeholder="Seu Email"/></p>
-<fieldset id="sexo">
-    <legend>
-        Sexo:
-    </legend>
-    <input name="Sexo" id="Masc" type="radio" checked><label for="Masc">Masculino</label><br>
-    <input name="Sexo" id="Fem" type="radio"><label for="Fem">Feminino</label>
-</fieldset>
-    <p>Data de Nascimento: <input name="tNasc" id="cNasc" type="date"/></p>
-</fieldset>
+	</header>
+		<section id="corpo-full">
+    			<article id="artigo-principal">
+				<header id="cabecalho-artigo">
+    					<hgroup>   
+						<h3>Fale Conosco > Contato</h3>
+						<h1>Formulário de Contato</h1>
+        					<h2>por Vinícius Alcântara</h2>
+        					<h3 id="direita">Atualizado em 01/Maio/2017</h3>
+    					</hgroup>
+	</header>   
+			</article>
+<form method="post" id="fContato" action="mailto:vinicius.redes2011@gmail.com" oninput="calc_total();">
+	<fieldset id="int">
+		<fieldset id="usuario">
+    			<legend>Identificação do Usuário</legend>
+    				<p><label for="cNome">Nome: </label><input name="tNome" id="cNome" type="text" size="25" maxlength="60" placeholder="Seu Nome"/></p>
+    				<p><label for="cSenha">Senha: </label><input name="tSenha" id="cSenha" type="password" size="25" placeholder="Sua Senha"/></p>
+    				<p><label for="cEmail">E-mail: </label><input name="tEmail" id="cEmail" type="email" size="25" maxlength="50" placeholder="Seu Email"/></p>
+					<fieldset id="sexo">
+    						<legend>
+        						Sexo:
+    								</legend>
+    									<input name="Sexo" id="Masc" type="radio" checked><label for="Masc">Masculino</label><br>
+    									<input name="Sexo" id="Fem" type="radio"><label for="Fem">Feminino</label>
+					</fieldset>
+    						<p>Data de Nascimento: <input name="tNasc" id="cNasc" type="date"/></p>
+		</fieldset>
 <fieldset id="endereco">
     <legend>Endereço do Usuário</legend>
-    <p><label for="cLogradouro">Logradouro: <input type="text" name="tLogradouro" id="cLogradouro" placeholder="Rua;Avenida;Bairro" size="20"/></label></p>
-    <p><label for="cNumero">Número: <input type="number" name="tNumero" id="cNumero" min="0" max="99999"/></label></p>
-    <p><label for="cEst">Estado: </label>
-    <select name="tEst" id="cEst">
-        <optgroup id="rSuldeste" label="Região Suldeste">
-        <option value="RJ">Rio de Janeiro</option>
-        <option value="SP" selected="">São Paulo</option>
-        <option value="MG">Minas Gerais</option>
-        </optgroup>
-        <optgroup id="rSul" label="Região Sul">
-        <option value="PR">Paraná</option>
-        <option value="SC">Santa Catarina</option>
-        <option value="RS">Rio Grande do Sul</option>
-        </optgroup>
-    </select>
-    </p>
-    <p><label for="cCid">Cidade: <input type="text" name="tCid" id="cCid" size="20" maxlength="60" placeholder="Sua Cidade" list="cidadesRJ" /></label>
-        <datalist id="cidadesRJ">
-            <option value="Rio de Janeiro"></option>
-            <option value="Nova Iguaçu"></option>
-            <option value="Niteroi"></option>
-            <option value="Belford Rocho"></option>
-        </datalist>
-    </p>
+    	<p><label for="cLogradouro">Logradouro: <input type="text" name="tLogradouro" id="cLogradouro" placeholder="Rua;Avenida;Bairro" size="20"/></label></p>
+    	<p><label for="cNumero">Número: <input type="number" name="tNumero" id="cNumero" min="0" max="99999"/></label></p>
+    	<p><label for="cEst">Estado: </label>
+    		<select name="tEst" id="cEst">
+        		<optgroup id="rSuldeste" label="Região Suldeste">
+        			<option value="RJ">Rio de Janeiro</option>
+        			<option value="SP" selected="">São Paulo</option>
+        			<option value="MG">Minas Gerais</option>
+        		</optgroup>
+        		<optgroup id="rSul" label="Região Sul">
+        			<option value="PR">Paraná</option>
+        			<option value="SC">Santa Catarina</option>
+        			<option value="RS">Rio Grande do Sul</option>
+        		</optgroup>
+    		</select>
+    	</p>
+    		<p><label for="cCid">Cidade: <input type="text" name="tCid" id="cCid" size="20" maxlength="60" placeholder="Sua Cidade" list="cidadesRJ" /></label>
+        		<datalist id="cidadesRJ">
+            			<option value="Rio de Janeiro"></option>
+            			<option value="Nova Iguaçu"></option>
+            			<option value="Niteroi"></option>
+            			<option value="Belford Rocho"></option>
+        		</datalist>
+    		</p>
+	</fieldset>
+		<fieldset id="mensagem">
+    			<legend>Mensagem do Usuário</legend>
+    				<p><label for="cUrg">Grau de Urgência: Min <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Max</label></p>
+    				<p><label for="cMsg">Mensagem:</label>
+        				<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite sua mensagem aqui!"></textarea>
+    				</p>      
 </fieldset>
-<fieldset id="mensagem">
-    <legend>Mensagem do Usuário</legend>
-    <p><label for="cUrg">Grau de Urgência: Min <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Max</label></p>
-    <p><label for="cMsg">Mensagem:</label>
-        <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite sua mensagem aqui!"></textarea>
-    </p>
-        
-</fieldset>
-<fieldset id="pedido">
-    <legend>Quero um Google Glass</legend>
-    <p><input type="checkbox" name="tPed" id="cPed" checked=""/><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
-    <p><input type="color" name="tCor" id="Ccor" value="#0000ff"/><label for="Ccor"> Cor:</label></p>
-    <p><label for="cQtd">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"/></label></p>
-    <p><label for="cTot">Preço Total: R$ <input type="text" name="tTot" id="cTot" readonly="" placeholder="Total a Pagar!"></label></p>
+	<fieldset id="pedido">
+    		<legend>Quero um Google Glass</legend>
+    			<p><input type="checkbox" name="tPed" id="cPed" checked=""/><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    			<p><input type="color" name="tCor" id="Ccor" value="#0000ff"/><label for="Ccor"> Cor:</label></p>
+    			<p><label for="cQtd">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"/></label></p>
+    			<p><label for="cTot">Preço Total: R$ <input type="text" name="tTot" id="cTot" readonly="" placeholder="Total a Pagar!"></label></p>
 </fieldset>
      <input id="botao-enviar" type="submit" value="Enviar"/>
-</fieldset>
-           
-
+		</fieldset>
 </form>
-<footer id="rodape">    
-    <p>Copyright &copy; 2017 - by Vinícius Alcântara<br><a href="http://facebook.com.br/cursosemvideo" target="_blank">Facebook</a> | <a href="http://twitter.com.br/cursosemvideo" target="_blank">Twitter</a></p>
-</footer>
+	<footer id="rodape">    
+    		<p>Copyright &copy; 2017 - by Vinícius Alcântara<br><a href="http://facebook.com.br/cursosemvideo" target="_blank">Facebook</a> | <a href="http://twitter.com.br/cursosemvideo" target="_blank">Twitter</a></p>
+	</footer>
 </div>
 </body>
 </html>
